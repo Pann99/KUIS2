@@ -7,22 +7,19 @@ import java.util.List;
 public class ItemCollection {
     private List<Item> items;
 
-    // Konstruktor untuk inisialisasi daftar item
+    // Konstruktor
     public ItemCollection() {
         items = new ArrayList<>();
     }
 
-    // Metode untuk menambahkan item ke dalam daftar
     public void tambahItem(Item item) {
         items.add(item);
     }
 
-    // Metode untuk menghapus item dari daftar berdasarkan nama
     public void hapusItem(String nama) {
         items.removeIf(item -> item.getNama().equalsIgnoreCase(nama));
     }
 
-    // Metode untuk mencari item dari daftar berdasarkan nama
     public Item cariItem(String nama) {
         for (Item item : items) {
             if (item.getNama().equalsIgnoreCase(nama)) {
@@ -32,7 +29,6 @@ public class ItemCollection {
         return null;
     }
 
-    // Metode untuk mencetak semua item dalam daftar
     public void cetakSemuaItem() {
         if (items.isEmpty()) {
             System.out.println("Daftar item kosong!");
@@ -46,7 +42,6 @@ public class ItemCollection {
         }
     }
 
-    // Metode untuk mengurutkan item berdasarkan harga
     public void urutkanItemBerdasarkanHarga() {
         Collections.sort(items, Comparator.comparingDouble(Item::getHarga));
     }

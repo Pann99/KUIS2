@@ -5,10 +5,7 @@ public class Item {
     private double harga;
     private int jumlah;
 
-    // Konstruktor default
-    public Item() {}
-
-    // Konstruktor dengan parameter
+    // Konstruktor
     public Item(String nama, double harga, int jumlah) {
         this.nama = nama;
         this.harga = harga;

@@ -4,17 +4,15 @@ import java.util.Stack;
 public class ItemStack {
     private Stack<Item> stack;
 
-    // Konstruktor untuk inisialisasi stack
+    // Konstruktor
     public ItemStack() {
         stack = new Stack<>();
     }
 
-    // Metode untuk menambahkan item ke dalam stack
     public void tambahItem(Item item) {
         stack.push(item);
     }
 
-    // Metode untuk menghapus item dari stack
     public Item hapusItem() {
         if (!stack.isEmpty()) {
             return stack.pop();
@@ -24,7 +22,6 @@ public class ItemStack {
         }
     }
 
-    // Metode untuk mencari item berdasarkan nama dalam stack
     public Item cariItem(String nama) {
         for (Item item : stack) {
             if (item.getNama().equalsIgnoreCase(nama)) {
@@ -34,7 +31,6 @@ public class ItemStack {
         return null;
     }
 
-    // Metode untuk mencetak semua item dalam stack
     public void cetakSemuaItem() {
         if (stack.isEmpty()) {
             System.out.println("Stack kosong!");

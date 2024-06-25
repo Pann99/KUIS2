@@ -5,7 +5,6 @@ public class MainCollection {
     public static void main(String[] args) {
         ItemCollection itemCollection = new ItemCollection();
 
-        // Menambahkan item awal
         itemCollection.tambahItem(new Item("Pulpen", 1500, 100));
         itemCollection.tambahItem(new Item("Buku Catatan", 2500, 50));
         itemCollection.tambahItem(new Item("Penghapus", 500, 200));
